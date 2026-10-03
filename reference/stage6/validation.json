@@ -1,0 +1,8 @@
+{
+  "all_cluster_names_assigned": true,
+  "configured_clusters_profiled": true,
+  "all_profile_shares_nonnegative": true,
+  "market_access_present_for_majority": true,
+  "interpretation_table_complete": true,
+  "all_checks_pass": true
+}

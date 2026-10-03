@@ -1,0 +1,19 @@
+{
+  "full_run": "passed",
+  "months": 24,
+  "comparisons": 72,
+  "labels_exact_match": true,
+  "icvi_allclose": true,
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "unit_tests": 4,
+  "alternative_config": {
+    "n_clusters": 4,
+    "n_neighbors": 10,
+    "dynamics": "passed",
+    "quality": "passed"
+  },
+  "format_check": "ruff passed",
+  "python": "3.12",
+  "fresh_dependency_install_tested": false
+}

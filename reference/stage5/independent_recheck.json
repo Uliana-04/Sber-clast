@@ -1,0 +1,7 @@
+{
+  "adjacent_pair_recalculation_matches": true,
+  "transition_matrix_recalculation_matches": true,
+  "stability_recalculation_matches": true,
+  "fixed_seed_partition_reproducible": true,
+  "all_checks_pass": true
+}

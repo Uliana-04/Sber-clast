@@ -1,0 +1,33 @@
+{
+  "seed": 42,
+  "threads": 2,
+  "data": {
+    "consumption": "data/raw/consumption.parquet",
+    "market_access": "data/raw/market_access.parquet"
+  },
+  "output_dir": "outputs",
+  "features": {
+    "total_category": "Все категории",
+    "categories": [
+      "Здоровье",
+      "Маркетплейсы",
+      "Общественное питание",
+      "Продовольствие",
+      "Транспорт"
+    ],
+    "share_scale": 100.0
+  },
+  "network": {
+    "n_neighbors": 15
+  },
+  "clustering": {
+    "n_clusters": 5,
+    "assign_labels": "cluster_qr",
+    "eigen_solver": "arpack",
+    "kmeans_n_init": 10
+  },
+  "quality": {
+    "s_dbw_method": "Halkidi",
+    "nearest_centr": false
+  }
+}

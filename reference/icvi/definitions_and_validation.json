@@ -1,0 +1,33 @@
+{
+  "SW": "Exact full-month mean silhouette on Euclidean standardized log1p shares; no sampling.",
+  "CH": "Calinski-Harabasz on complete monthly attributes.",
+  "S_Dbw": "s-dbw 0.4.0; Halkidi; nearest_centr=False; complete monthly attributes.",
+  "AVI": "B=S.T A S; I_k=B_kk; T_k=sum_l B_kl; AVI=mean_k(I_k/T_k). Weighted extension of Eq.18-19.",
+  "AVU": "E_k=T_k-I_k; AVU=(1/K)*sum_{k!=l} B_kl/(E_k+E_l-B_kl). Eq.20-21. Zero/zero contributes 0 (no merging edges).",
+  "MQ": "Weighted modularization quality (Chen et al. Eq.13-15): mean_k(B_kk/n_k^2) - sum_{k!=l}(B_kl/(2*n_k*n_l))/(K*(K-1)/2). Not Newman Q; definition chosen explicitly because task does not specify MQ variant.",
+  "network": "Symmetric clipped cosine kNN15 of monthly z-scored log1p category shares; diagonal removed; weights retained; all available municipalities.",
+  "direction": {
+    "SW": "maximize",
+    "CH": "maximize",
+    "S_Dbw": "minimize",
+    "AVI": "maximize",
+    "AVU": "minimize",
+    "MQ": "maximize"
+  },
+  "sources": [
+    "https://link.springer.com/article/10.1134/S1064562425700589",
+    "https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/sfw2.12075",
+    "https://github.com/alashkov83/S_Dbw",
+    "https://scikit-learn.org/stable/modules/clustering.html"
+  ],
+  "checks": "Independent block slicing verifies AVI, AVU, MQ for all 72 partitions; direct ANOVA sums verify CH; bounds and finiteness verified.",
+  "seed": 42,
+  "months": 24,
+  "methods": [
+    "Spectral",
+    "KMeans",
+    "Ward"
+  ],
+  "K": 5,
+  "input_sha256": "9833ddaaee7b2a182ed4cceeed16469031700ea87d508bd976150c6770ef8a61"
+}

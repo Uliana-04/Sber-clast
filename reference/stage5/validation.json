@@ -1,0 +1,12 @@
+{
+  "n_months": 24,
+  "n_municipalities_any_month": 2190,
+  "n_cluster_assignments": 50521,
+  "cluster_labels_valid": true,
+  "alignment_mappings_bijective": true,
+  "pair_rows_match_transition_total": true,
+  "transition_rows_sum_to_one": true,
+  "stability_in_unit_interval": true,
+  "median_stability": 0.8695652173913043,
+  "mean_stability": 0.8302169589498964
+}

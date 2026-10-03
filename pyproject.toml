@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "municipal-economic-network"
+version = "1.0.0"
+description = "Dynamic attributed municipal economic networks from SberIndex"
+requires-python = ">=3.12,<3.14"
+dependencies = ["numpy==2.3.5", "pandas==2.2.3", "scipy==1.17.0", "scikit-learn==1.8.0", "pyarrow==25.0.1", "s-dbw==0.4.0", "threadpoolctl==3.6.0", "PyYAML==6.0.3"]
+
+[project.scripts]
+municipal-network = "municipal_economy.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
